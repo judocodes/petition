@@ -1,0 +1,166 @@
+{{#if error}}
+{{>error-message}}
+{{/if}}
+<h1 class="text-2xl md:text-4xl mb-4 font-light">
+    So far, we have
+    <span class="font-semibold text-blue-600">{{ num }}</span
+    >/50 Signups:
+</h1>
+<div
+    class="shadow text-center py-10 bg-blue-100 border border-white rounded md:px-4"
+>
+    {{#signers}}
+    <div class="flex flex-col md:flex-row md:justify-between items-center mb-8">
+        <img
+            class="w-32 h-5 object-contain md:order-1"
+            src="{{ this.signature }}"
+            alt=""
+        />
+        <p class="text-sm md:text-xl">
+            {{#if this.url
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }}<a class="text-blue-600 hover:underline" href="{{ this.url }}"
+                >{{ this.first }} {{ this.last }}</a
+            >{{else}}{{ this.first }} {{ this.last
+            }}{{/if
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }}{{#if this.age
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }}<span>, {{ this.age }}</span
+            >{{/if
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }}{{#if this.city
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }}<span
+                >,
+                <a
+                    class="text-blue-600 hover:underline"
+                    href="/signers/{{ this.city }}"
+                    >{{ this.city }}</a
+                ></span
+            >{{/if}}
+        </p>
+    </div>
+    {{/signers}}
+</div>
+<a
+    href="#"
+    onclick="javascript:window.history.back(-1);return false;"
+    class="block btn text-center mt-4"
+    >Back
+</a>

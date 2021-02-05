@@ -1,0 +1,45 @@
+{
+    "name": "petition",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "env-cmd -f ./config/dev.env nodemon index.js",
+        "test": "env-cmd -f ./config/test.env jest --watch",
+        "build:css": "tailwindcss build src/tailwind.css -o static/tailwind_min.css"
+    },
+    "engines": {
+        "node": "10.15.3"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "autoprefixer": "^10.0.0",
+        "bcryptjs": "^2.4.3",
+        "cookie-parser": "^1.4.3",
+        "cookie-session": "^2.0.0-alpha.1",
+        "csurf": "^1.11.0",
+        "express": "^4.14.0",
+        "express-handlebars": "^3.0.0",
+        "jest": "^25.1.0",
+        "postcss-cli": "^7.1.2",
+        "redis": "^2.6.2",
+        "spiced-pg": "^1.0.0",
+        "supertest": "^4.0.2",
+        "tailwindcss": "^1.8.10",
+        "uuid": "^8.3.0",
+        "validator": "^13.1.1"
+    },
+    "devDependencies": {
+        "env-cmd": "^10.1.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/spicedacademy/masala-petition.git"
+    },
+    "bugs": {
+        "url": "https://github.com/spicedacademy/masala-petition/issues"
+    },
+    "homepage": "https://github.com/spicedacademy/masala-petition#readme",
+    "description": ""
+}

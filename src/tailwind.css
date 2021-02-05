@@ -1,0 +1,29 @@
+@tailwind base;
+
+@tailwind components;
+
+.input-field {
+    @apply py-2 px-2 rounded shadow-sm outline-none;
+}
+
+.input-field:focus {
+    @apply shadow-md;
+}
+
+.btn {
+    @apply py-3 px-2 bg-blue-500 text-white text-center shadow;
+}
+
+.btn:hover {
+    @apply bg-blue-400 shadow-md;
+}
+
+.menu-link {
+    @apply text-sm tracking-tight;
+}
+
+.menu-link:hover {
+    @apply underline;
+}
+
+@tailwind utilities;

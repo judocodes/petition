@@ -1,0 +1,19 @@
+    {{#if error}}
+        {{>error-message}}
+    {{/if}}
+    <h3 class="text-2xl lg:text-3xl font-semibold mb-8">Sign up to Stop this Petition from Having More Than 50 Sign-Ups!</h3>
+    <form class="mx-auto flex flex-col justify-center mb-10 lg:w-2/3" method="POST" action="/register">
+        {{>csurf}}
+        <input type="text" name="email" class="mb-4 input-field" placeholder="E-Mail-Address">
+        <input type="text" name="first" class="mb-4 input-field"
+        placeholder="First Name">
+        <input type="text" name="last" class="mb-4 input-field"
+        placeholder="Last Name">
+        <input type="password" name="password" class="mb-4 input-field"
+        placeholder="Password">
+        <input type="password" name="match" class="mb-4 input-field"
+        placeholder="Confirm Password">
+        <button type="submit" class="btn mt-3">Register</button>
+    </form>
+    <p class="text-sm">Already have an account? Click <a class="text-blue-600 font-semibold" href="/login">here</a> to log in.</p>
+</div>

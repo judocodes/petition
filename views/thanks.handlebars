@@ -1,0 +1,25 @@
+<h1 class="text-xl md:text-2xl lg:text-3xl font-light">
+    Thank you so much <span class="hidden md:inline">for signing up</span>,
+    <span class="font-semibold text-blue-600">{{ name }}</span
+    >.
+    <br />
+    Together, we will stop this petition from reaching 50 sign-ups.
+</h1>
+<img
+    class="mx-auto my-8 md:my-12"
+    src="{{ signature }}"
+    alt="your signature here"
+/>
+
+<div class="flex flex-col mx-auto items-center">
+    <a href="/signers" class="btn my-2 w-56">Who else has signed?</a>
+    <form action="/thanks/logout" method="POST">
+        {{>csurf}}
+        <button type="submit" class="my-2 w-56 btn bg-red-600 hover:bg-red-500">
+            Logout
+        </button>
+        <p class="text-sm w-56 leading-none my-2">
+            (Maybe log in under a different name and sign again?)
+        </p>
+    </form>
+</div>
